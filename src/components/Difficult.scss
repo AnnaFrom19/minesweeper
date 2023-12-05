@@ -1,0 +1,99 @@
+.difficult-info {
+  text-transform: capitalize;
+  padding: 5px;
+  border: 1px solid #9297db;
+  border-radius: 10px;
+}
+.change-difficult__btn {
+  background-color: #b9e6d7;
+    cursor: pointer;
+    @media (hover: hover) {
+      &:hover {
+        background-color: rgb(158, 236, 210);
+      }
+    }
+}
+
+
+.choose-difficult__list {
+  list-style: none;
+}
+.choose-difficult__label {
+  border: 0;
+  background-color: transparent;
+  padding: 10px;
+  cursor: pointer;
+  @media (hover: hover) {
+    &:hover {
+      background-color: rgb(148, 231, 203);
+    }
+  }
+  &.current {
+    border: 1px solid green;
+    cursor: default;
+    @media (hover: hover) {
+      &:hover {
+        background-color: transparent;
+      }
+    } 
+  }
+
+}
+.error {
+  background-color: rgb(255, 204, 187);
+}
+
+.choose-difficult__wrapper {
+  border-radius: 15px;
+  width: 50%;
+  margin: auto;
+  padding: 10px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: inherit;
+  gap: 10px;
+}
+
+.mine-choice {
+  padding: 10px;
+  width: 75%;
+}
+
+.save-difficult-info {
+  padding: 10px;
+  width: 75%;
+  cursor: pointer;
+  background-color: rgb(185, 230, 215);
+  @media (hover: hover) {
+    &:hover {
+      background-color: rgb(158, 236, 210);
+    }
+  }
+}
+
+.dark {
+  .change-difficult__btn {
+    color: white;
+    background-color: rgb(23, 53, 43);
+    @media (hover: hover) {
+      &:hover {
+        background-color: rgb(26, 77, 60);
+      }
+    }
+  }
+  .save-difficult-info {
+    color: white;
+    background-color: rgb(23, 53, 43);
+    @media (hover: hover) {
+      &:hover {
+        background-color: rgb(26, 77, 60);
+      }
+    }
+  }
+  .choose-difficult__wrapper {
+    background-color: #999;
+    color: white
+  }
+}

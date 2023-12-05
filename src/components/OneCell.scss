@@ -1,0 +1,130 @@
+$simple-size: min(6vh, 6vw);
+$simple-font-size: min(5vh, 5vw);
+
+$easy-size: min(9vh, 9vw);
+$easy-font-size: min(7vh, 7vw);
+
+$hard-size: min(3.6vh, 3.6vw);
+$hard-font-size: min(3vh, 3vw);
+
+
+.simple-cell {
+  background-color: #ccc;
+  border: 1px solid black;
+  width: $simple-size;
+  height: $simple-size;
+  font-size: $simple-font-size;
+  font-weight: bold;
+  cursor: pointer;
+
+  &.marked-cell {
+    background-image: url('../../assets/svg/flag.svg');
+    background-size: 75%;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: default;
+  }
+
+  &.open-cell {
+    background: #999;
+    cursor: default;
+  }
+
+  &.cell-is-mine {
+    background-image: url('../../assets/svg/explode.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &.cell-is-1 {
+    color: blue;
+  }
+
+  &.cell-is-2 {
+    color: blueviolet;
+  }
+
+  &.cell-is-3 {
+    color: orange;
+  }
+
+  &.cell-is-4 {
+    color: red;
+  }
+
+  &.cell-is-5 {
+    color: green;
+  }
+
+  &.cell-is-6 {
+    color: cyan;
+  }
+
+  &.cell-is-7 {
+    color: white;
+  }
+
+  &.cell-is-8 {
+    color: black;
+  }
+}
+
+.size-is-easy {
+  .simple-cell {
+    width: $easy-size;
+    height: $easy-size;
+    font-size: $easy-font-size;
+  }
+}
+
+.size-is-hard {
+  .simple-cell {
+    width: $hard-size;
+    height: $hard-size;
+    font-size: $hard-font-size;
+  }
+}
+
+.dark {
+  .simple-cell {
+    background-color: #666;
+    &.open-cell {
+      background-color: #999;
+    }
+  }
+}
+
+@media (hover: hover) {
+  .dark {
+    .simple-cell {
+      &:hover {
+        background-color: #85510e;
+      }
+    }
+  }
+
+  .simple-cell {
+    &:hover {
+      background-color: antiquewhite;
+    }
+
+    &.open-cell {
+      &:hover {
+        background-color: #999;
+      }
+    }
+
+    &.marked-cell {
+      &:hover {
+        background-color: #ccc;
+      }
+    }
+  }
+
+  .marked-cell {
+    &:hover {
+      background-color: #666;
+    }
+  }
+}

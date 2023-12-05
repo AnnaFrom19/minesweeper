@@ -1,0 +1,15 @@
+.minesweeper-field {
+  display: grid;
+  grid-template-columns:repeat(15, min(6vh,6vw));
+  grid-template-rows:repeat(15, min(6vh,6vw));
+  width: min(90vh,90vw);
+  margin: auto;
+  &.size-is-easy {
+    grid-template-columns:repeat(10, min(9vh,9vw));
+    grid-template-rows:repeat(10, min(9vh,9vw));
+  }
+  &.size-is-hard {
+    grid-template-columns:repeat(25, min(3.6vh,3.6vw));
+    grid-template-rows:repeat(25, min(3.6vh,3.6vw));
+  }
+}

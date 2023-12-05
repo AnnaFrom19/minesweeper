@@ -1,0 +1,15 @@
+.theme-checkbox{
+  opacity: 0;
+}
+.theme-label {
+  width: 80px;
+  height: 50px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+  background-image: url('../../assets/svg/toggle_off.svg');
+  &:has(.theme-checkbox:checked) {
+    background-image: url('../../assets/svg/toggle_on.svg');
+  }
+}

@@ -1,0 +1,33 @@
+.audio-button {
+  width: 40px;
+  height: 40px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-color: azure;
+  border: 1px solid black;
+  border-radius: 15px;
+  cursor: pointer;
+  background-image: url('../../assets/svg/sound-on.svg');
+  &.audio_false {
+    background-image: url('../../assets/svg/sound-off.svg');
+  }
+  @media (hover: hover) {
+    &:hover {
+      background-color: rgb(158, 236, 210);
+    }
+  }
+}
+
+.dark {
+  .audio-button {
+    background-color: #ccc;
+    border-color: aqua;
+    @media (hover: hover) {
+      &:hover {
+        background-color: #eee;
+      }
+    }
+  }
+ 
+}
